@@ -2,10 +2,11 @@
 string turtlename
 float64 distance
 float64 vitesse
+bool isForward
 ---
 # Define result's message
 ---
 # Define feedback's message
-
+geometry_msgs/Pose position
 
 #http://wiki.ros.org/actionlib

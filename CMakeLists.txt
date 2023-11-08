@@ -37,7 +37,8 @@ add_action_files(
     # primitives (add .action file for primitives below)
     # ActionTemplate.action
     # skills  (add .action file for skills below)
-
+    Move.action
+    Follow.action
 )
 
 ## Generate added messages and services with any dependencies listed here
@@ -111,5 +112,7 @@ include_directories(
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
 
-
+catkin_install_python(PROGRAMS src/pr_move.py src/test_move.py src/test_Follow.py src/pr_follow.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
