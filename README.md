@@ -127,4 +127,9 @@ Based on the sk_template syntax (scripts/skills/ folder) and the two primitives 
 
 
 
-Spawn an other turtle: osservice call /spawn 0 10 0 "turtle2"
+Spawn an other turtle: rosservice call /spawn 0 10 0 "turtle2"
+
+
+    git remote add origin https://github.com/Yoanngr/test.git
+    git branch -M main
+    git push -u origin main
