@@ -122,3 +122,9 @@ Based on the same syntax, create a pr_rotate primitive with its .action file to 
 ## Step 5 - Write a skill using both primitives
 
 Based on the sk_template syntax (scripts/skills/ folder) and the two primitives previously created, write a skill that will make the turtle patroling by repetitively moving and rotating.
+
+
+
+
+
+Spawn an other turtle: osservice call /spawn 0 10 0 "turtle2"
