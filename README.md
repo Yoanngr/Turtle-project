@@ -134,7 +134,7 @@ Spawn an other turtle: rosservice call /spawn 0 10 0 "turtle2"
 Pay attention to the branch where you "push" your work.
 Change the number after "origin".
 
-    git remote add origin<i> https://github.com/Yoanngr/test.git
+    git remote add origin<i> https://github.com/Yoanngr/Turtle-project.git
     git branch -M <branch where you want push>
     git push -u origin<i> <branch where you want push>
 
