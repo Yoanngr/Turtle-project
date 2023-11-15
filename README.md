@@ -130,6 +130,11 @@ Based on the sk_template syntax (scripts/skills/ folder) and the two primitives 
 Spawn an other turtle: rosservice call /spawn 0 10 0 "turtle2"
 
 
-    git remote add origin https://github.com/Yoanngr/test.git
-    git branch -M main
-    git push -u origin main
+## Step 5 - How to push your work here 
+pay attention to the branch where you "push" your work
+change the number after "origin"
+
+    git remote add origin<i> https://github.com/Yoanngr/test.git
+    git branch -M <branch where you want push>
+    git push -u origin<i> <branch where you want push>
+
