@@ -1,0 +1,12 @@
+# Define the Rotate goal
+string turtle_name   # The name of the turtle
+float32 speed         # The angular speed for rotation
+float32 angle         # The angle to rotate in degrees
+bool isClockwise      # Direction of rotation (clockwise or counterclockwise)
+---
+# Define result's message
+---
+# Define feedback's message
+turtlesim/Pose pose
+
+#http://wiki.ros.org/actionlib

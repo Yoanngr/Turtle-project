@@ -43,6 +43,7 @@ add_action_files(
     Move.action
     Rotate.action
     Patrol.action
+    follo.action
 )
 
 ## Generate added messages and services with any dependencies listed here
@@ -118,7 +119,7 @@ include_directories(
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
 
-catkin_install_python(PROGRAMS  src/turtle2_follow.py src/square.py src/turtle2_track_action_client.py src/turtle2_track_action_server.py  src/pr_move.py src/test_move.py src/pr_rotate.py src/test_rotate.py src/test_patrol.py src/sk_patrol.py
+catkin_install_python(PROGRAMS  src/turtle2_follow.py src/square.py src/turtle2_track_action_client.py src/turtle2_track_action_server.py  src/pr_move.py src/test_move.py src/pr_rotate.py src/test_rotate.py src/test_patrol.py src/sk_patrol.py src/sk_follow.py src/test_follo.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
