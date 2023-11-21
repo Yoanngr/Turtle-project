@@ -11,7 +11,9 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   message_generation
   actionlib_msgs
-  actionlib)
+  actionlib
+  turtlesim  # Add turtlesim as a dependency
+)
 
 
 ## Our script uses a setup.py for catkin to use
@@ -37,7 +39,10 @@ add_action_files(
     # primitives (add .action file for primitives below)
     # ActionTemplate.action
     # skills  (add .action file for skills below)
-
+    TrackTurtle.action
+    Move.action
+    Rotate.action
+    Patrol.action
 )
 
 ## Generate added messages and services with any dependencies listed here
@@ -45,7 +50,9 @@ generate_messages(
    DEPENDENCIES
    actionlib_msgs
    geometry_msgs
+   turtlesim  # Add turtlesim as a dependency
 )
+
 
 #Since we are using custom messages and packages, we have to declare
 #For aditional information: http://wiki.ros.org/ROS/Tutorials/DefiningCustomMessages
@@ -111,5 +118,8 @@ include_directories(
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
 
+catkin_install_python(PROGRAMS  src/turtle2_follow.py src/square.py src/turtle2_track_action_client.py src/turtle2_track_action_server.py  src/pr_move.py src/test_move.py src/pr_rotate.py src/test_rotate.py src/test_patrol.py src/sk_patrol.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 
