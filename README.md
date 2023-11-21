@@ -130,11 +130,11 @@ Based on the sk_template syntax (scripts/skills/ folder) and the two primitives 
 Spawn an other turtle: rosservice call /spawn 0 10 0 "turtle2"
 
 
-## Step 5 - How to push your work here 
+## Step 6 - How to push your work here 
 Pay attention to the branch where you "push" your work.
 Change the number after "origin".
 
-    git remote add origin<i> https://github.com/Yoanngr/Turtle-project.git
-    git branch -M <branch where you want push>
-    git push -u origin<i> <branch where you want push>
-
+    git add . #take all the node inside my file
+    git commit -m "text"
+    git remote add origin main
+    git push -u origin <your branche>
