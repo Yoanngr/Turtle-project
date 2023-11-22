@@ -30,13 +30,15 @@ def calculate_distance():
 
 def calculate_angle():
     # Calculate the angle difference (orientation) between turtle1 and turtle2
-    if current_pose_turtle1.x < 0:
-    	x = -current_pose_turtle1.x
-    else :
-    	x = current_pose_turtle1.x
-    angle_difference = math.atan2(current_pose_turtle1.y - current_pose_turtle2.y,
-                                   x - current_pose_turtle2.x) - current_pose_turtle2.theta
+    angle_to_turtle1 = math.atan2(current_pose_turtle1.y - current_pose_turtle2.y,
+                                  current_pose_turtle1.x - current_pose_turtle2.x)
+
+    # Convert the angle difference to be within the range [-pi, pi]
+    angle_difference = angle_to_turtle1 - current_pose_turtle2.theta
+    angle_difference = math.atan2(math.sin(angle_difference), math.cos(angle_difference))
+
     return angle_difference
+
 
 class Turtle2TrackActionServer:
     def __init__(self):

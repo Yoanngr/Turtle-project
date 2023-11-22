@@ -7,7 +7,7 @@ Skill that calls move and rotate primitives to Patrol with the turtle :
 import rospy
 import actionlib
 import ACROBA_Workshop_SIGMA.msg
-from ACROBA_Workshop_SIGMA.msg import TrackTurtleAction, TrackTurtleGoal, TrackTurtleResult
+
 
 class Patrol:
     """
@@ -17,6 +17,8 @@ class Patrol:
     # create messages that are used to publish feedback/result
     feedback_ = ACROBA_Workshop_SIGMA.msg.folloFeedback
     result_ = ACROBA_Workshop_SIGMA.msg.folloResult
+
+
 
     client_move = actionlib.SimpleActionClient(
         "Move", ACROBA_Workshop_SIGMA.msg.MoveAction
@@ -91,7 +93,7 @@ class Patrol:
         self.client_TrackTurtle.send_goal(self.goal_TrackTurtle)
 
         # wait for response
-        while self.client_move.get_result() is None:
+        while self.client_TrackTurtle.get_result() is None:
             if self._as.is_preempt_requested() or rospy.is_shutdown():
                 rospy.loginfo("%s: Preempted" % self._action_name)
                 self.client_TrackTurtle.cancel_goal()
@@ -137,6 +139,6 @@ class Patrol:
 
 
 if __name__ == "__main__":
-    rospy.init_node("follow")
+    rospy.init_node("sk_follow_node")
     server = Patrol(rospy.get_name())
     rospy.spin()
